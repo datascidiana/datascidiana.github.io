@@ -1,6 +1,6 @@
 # Diana's Portfolio
 
-Interactive macOS desktop-themed portfolio for Diana Morales — Data Scientist & ML Engineer.
+Interactive macOS desktop-themed portfolio.
 
 Live at: **[datascidiana.github.io](https://datascidiana.github.io)**
 
