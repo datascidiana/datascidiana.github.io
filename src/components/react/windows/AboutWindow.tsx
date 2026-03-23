@@ -55,9 +55,7 @@ export default function AboutWindow() {
             from discovery through prototype to adoption — building systems like
             autonomous AI agents with LangGraph, fine-tuning LLMs for specialized
             domains, and architecting knowledge graph platforms that power
-            enterprise AI workflows. My work has directly contributed to a $786M
-            increase in company market cap and earned recognition from C-suite
-            leadership.
+            enterprise AI workflows.
           </p>
         </div>
       </div>
