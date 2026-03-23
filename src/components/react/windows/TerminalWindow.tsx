@@ -118,6 +118,23 @@ const commands: Record<string, string> = {
   → Steal Like an Artist         Austin Kleon`,
 };
 
+function renderWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+|[a-z0-9-]+\.[a-z]{2,}\/[^\s]*)/g;
+  const parts = text.split(urlRegex);
+  return parts.map((part, i) => {
+    if (urlRegex.test(part)) {
+      const href = part.startsWith('http') ? part : `https://${part}`;
+      return (
+        <a key={i} href={href} target="_blank" rel="noopener noreferrer"
+          style={{ color: '#5af78e', textDecoration: 'underline' }}>
+          {part}
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 export default function TerminalWindow() {
   const [history, setHistory] = useState<TerminalLine[]>([
     { type: 'output', text: "Last login: " + new Date().toDateString() + " on ttys000" },
@@ -185,7 +202,7 @@ export default function TerminalWindow() {
               marginBottom: 2,
             }}
           >
-            {line.text}
+            {line.type === 'output' ? renderWithLinks(line.text) : line.text}
           </div>
         ))}
 
