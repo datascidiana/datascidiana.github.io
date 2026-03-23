@@ -1,0 +1,211 @@
+.window-container {
+  position: absolute;
+}
+
+.window {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-window);
+  border-radius: var(--radius-window);
+  overflow: hidden;
+  box-shadow: var(--shadow-window);
+  height: 100%;
+  width: 100%;
+}
+
+.window.focused {
+  box-shadow: var(--shadow-window-focused);
+}
+
+.window-titlebar {
+  display: flex;
+  align-items: center;
+  height: 52px;
+  min-height: 52px;
+  background: var(--titlebar-bg);
+  padding: 0 14px;
+  gap: 8px;
+  user-select: none;
+  cursor: default;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+}
+
+.window.focused .window-titlebar {
+  background: var(--titlebar-bg-focused);
+}
+
+.traffic-lights {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.traffic-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 0.5px solid rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: filter 0.15s;
+  position: relative;
+}
+
+.traffic-light:hover {
+  filter: brightness(0.9);
+}
+
+.traffic-light.red {
+  background: var(--traffic-red);
+}
+
+.traffic-light.yellow {
+  background: var(--traffic-yellow);
+}
+
+.traffic-light.green {
+  background: var(--traffic-green);
+}
+
+/* Unfocused traffic lights */
+.window:not(.focused) .traffic-light {
+  background: #ddd;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Show icons on hover */
+.traffic-lights:hover .traffic-light::after {
+  font-size: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+}
+
+.traffic-lights:hover .traffic-light.red::after {
+  content: '✕';
+}
+
+.traffic-lights:hover .traffic-light.yellow::after {
+  content: '−';
+}
+
+.traffic-lights:hover .traffic-light.green::after {
+  content: '⤢';
+  font-size: 10px;
+}
+
+.window-title {
+  flex: 1;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--font-system);
+}
+
+.window:not(.focused) .window-title {
+  color: var(--text-secondary);
+}
+
+.window-body {
+  flex: 1;
+  overflow: auto;
+  padding: 20px;
+  background: var(--bg-window);
+}
+
+/* Window animations */
+.window-enter {
+  animation: window-open 0.25s ease-out;
+}
+
+.window-exit {
+  animation: window-close 0.2s ease-in forwards;
+}
+
+@keyframes window-open {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes window-close {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+}
+
+/* Minimized state */
+.window-minimized {
+  transform: scale(0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+/* Mobile sheet */
+.mobile-sheet-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+}
+
+.mobile-sheet {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9001;
+  background: var(--bg-window);
+  border-radius: 12px 12px 0 0;
+  display: flex;
+  flex-direction: column;
+  animation: sheet-up 0.3s ease-out;
+}
+
+@keyframes sheet-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+.mobile-sheet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 0.5px solid var(--border-color);
+}
+
+.mobile-sheet-close {
+  background: none;
+  border: none;
+  color: var(--accent-blue);
+  font-family: var(--font-system);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobile-sheet-body {
+  flex: 1;
+  overflow: auto;
+  padding: 16px;
+}

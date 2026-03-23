@@ -1,0 +1,21 @@
+---
+import { dockIcons } from '../../data/desktop-icons';
+---
+
+<div class="dock-wrapper">
+  <div class="dock">
+    {dockIcons.map((icon) => (
+      <div
+        class="dock-item"
+        data-window-id={icon.id}
+        onclick={`window.dispatchEvent(new CustomEvent('open-window', { detail: { id: '${icon.id}' } }))`}
+      >
+        <div class="dock-icon">
+          {icon.icon}
+        </div>
+        <span class="dock-label">{icon.label}</span>
+        <div class="dock-dot" />
+      </div>
+    ))}
+  </div>
+</div>

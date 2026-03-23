@@ -1,0 +1,21 @@
+---
+import Clock from '../react/Clock.tsx';
+---
+
+<nav class="menu-bar">
+  <div class="menu-bar-left">
+    <span class="menu-bar-logo">&#63743;</span>
+    <span class="menu-bar-item bold">Finder</span>
+    <span class="menu-bar-item">File</span>
+    <span class="menu-bar-item">Edit</span>
+    <span class="menu-bar-item">View</span>
+    <span class="menu-bar-item">Go</span>
+    <span class="menu-bar-item">Window</span>
+    <span class="menu-bar-item">Help</span>
+  </div>
+  <div class="menu-bar-right">
+    <span class="menu-bar-right-icon">🔋</span>
+    <span class="menu-bar-right-icon">📶</span>
+    <Clock client:only="react" />
+  </div>
+</nav>

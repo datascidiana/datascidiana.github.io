@@ -1,0 +1,105 @@
+.dock-wrapper {
+  position: fixed;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9998;
+}
+
+.dock {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 0.5px solid rgba(255, 255, 255, 0.35);
+  border-radius: 16px;
+}
+
+.dock-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+.dock-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+  transition: transform 0.2s ease;
+}
+
+.dock-label {
+  font-size: 11px;
+  font-family: var(--font-system);
+  font-weight: 500;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+  position: absolute;
+  bottom: 64px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px;
+  border-radius: 4px;
+  pointer-events: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.dock-label::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.7);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+/* CSS-only magnification using :has() */
+.dock-item:hover .dock-icon {
+  transform: scale(1.5) translateY(-10px);
+}
+
+.dock-item:hover .dock-label {
+  opacity: 1;
+}
+
+/* Adjacent items scale up slightly */
+.dock-item:has(+ .dock-item:hover) .dock-icon,
+.dock-item:hover + .dock-item .dock-icon {
+  transform: scale(1.25) translateY(-5px);
+}
+
+/* Two items away scale up a little */
+.dock-item:has(+ .dock-item + .dock-item:hover) .dock-icon,
+.dock-item:hover + .dock-item + .dock-item .dock-icon {
+  transform: scale(1.1) translateY(-2px);
+}
+
+.dock-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.dock-dot.active {
+  opacity: 1;
+}

@@ -1,0 +1,19 @@
+---
+import Desktop from '../layouts/Desktop.astro';
+import DesktopIcon from '../components/astro/DesktopIcon.astro';
+import WindowManager from '../components/react/WindowManager.tsx';
+import { desktopIcons } from '../data/desktop-icons';
+---
+
+<Desktop>
+  {desktopIcons.map((icon) => (
+    <DesktopIcon
+      id={icon.id}
+      label={icon.label}
+      icon={icon.icon}
+      top={icon.position.top}
+      left={icon.position.left}
+    />
+  ))}
+  <WindowManager client:only="react" />
+</Desktop>

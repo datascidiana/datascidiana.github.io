@@ -1,0 +1,117 @@
+---
+import '../styles/global.css';
+import '../styles/menubar.css';
+import '../styles/dock.css';
+import '../styles/window.css';
+import MenuBar from '../components/astro/MenuBar.astro';
+import Dock from '../components/astro/Dock.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Diana's Portfolio — Data Scientist & ML Engineer" />
+    <meta property="og:title" content="Diana — Data Scientist Portfolio" />
+    <meta property="og:description" content="Interactive macOS desktop-themed portfolio showcasing ML/AI projects." />
+    <link rel="icon" type="image/svg+xml" href="/website/favicon.svg" />
+    <title>Diana — Portfolio</title>
+  </head>
+  <body>
+    <!-- macOS Wallpaper — cloudy sky like renee.wiki -->
+    <div class="wallpaper">
+      <div class="cloud-layer cloud-layer-1"></div>
+      <div class="cloud-layer cloud-layer-2"></div>
+      <div class="cloud-layer cloud-layer-3"></div>
+      <div class="cloud-layer cloud-layer-4"></div>
+    </div>
+
+    <!-- Desktop -->
+    <MenuBar />
+    <main class="desktop-area">
+      <slot />
+    </main>
+    <Dock />
+
+    <style>
+      .wallpaper {
+        position: fixed;
+        inset: 0;
+        z-index: 0;
+        /* Soft sky gradient base */
+        background: linear-gradient(
+          180deg,
+          #8eb4d4 0%,
+          #a7c7dd 15%,
+          #b8d3e6 30%,
+          #c8dced 45%,
+          #d5e3f0 60%,
+          #dfe9f2 75%,
+          #e8eff5 90%,
+          #edf2f6 100%
+        );
+        overflow: hidden;
+      }
+
+      /* Cloud layers using radial gradients */
+      .cloud-layer {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+
+      .cloud-layer-1 {
+        background:
+          radial-gradient(ellipse 600px 200px at 15% 35%, rgba(255,255,255,0.85) 0%, transparent 70%),
+          radial-gradient(ellipse 500px 180px at 25% 40%, rgba(255,255,255,0.6) 0%, transparent 65%),
+          radial-gradient(ellipse 800px 250px at 70% 25%, rgba(255,255,255,0.8) 0%, transparent 70%),
+          radial-gradient(ellipse 400px 150px at 85% 30%, rgba(255,255,255,0.7) 0%, transparent 60%),
+          radial-gradient(ellipse 900px 300px at 50% 45%, rgba(255,255,255,0.5) 0%, transparent 70%);
+      }
+
+      .cloud-layer-2 {
+        background:
+          radial-gradient(ellipse 700px 220px at 10% 55%, rgba(255,255,255,0.6) 0%, transparent 65%),
+          radial-gradient(ellipse 550px 200px at 40% 60%, rgba(255,255,255,0.55) 0%, transparent 60%),
+          radial-gradient(ellipse 650px 230px at 75% 50%, rgba(255,255,255,0.65) 0%, transparent 65%),
+          radial-gradient(ellipse 450px 170px at 90% 58%, rgba(255,255,255,0.5) 0%, transparent 60%);
+      }
+
+      .cloud-layer-3 {
+        background:
+          radial-gradient(ellipse 1000px 350px at 30% 70%, rgba(255,255,255,0.45) 0%, transparent 70%),
+          radial-gradient(ellipse 800px 280px at 65% 75%, rgba(255,255,255,0.4) 0%, transparent 65%),
+          radial-gradient(ellipse 600px 200px at 5% 80%, rgba(255,255,255,0.5) 0%, transparent 60%),
+          radial-gradient(ellipse 500px 180px at 95% 72%, rgba(255,255,255,0.35) 0%, transparent 55%);
+      }
+
+      .cloud-layer-4 {
+        background:
+          radial-gradient(ellipse 1200px 400px at 50% 90%, rgba(230,238,245,0.9) 0%, transparent 70%),
+          radial-gradient(ellipse 900px 300px at 20% 85%, rgba(235,240,248,0.7) 0%, transparent 65%),
+          radial-gradient(ellipse 700px 250px at 80% 88%, rgba(230,236,244,0.6) 0%, transparent 60%);
+      }
+
+      .desktop-area {
+        position: fixed;
+        inset: 25px 0 0 0;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      /* Mobile: icon grid */
+      @media (max-width: 768px) {
+        .desktop-area {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: flex-start;
+          gap: 8px;
+          padding: 20px 16px 80px;
+          overflow-y: auto;
+        }
+      }
+    </style>
+  </body>
+</html>

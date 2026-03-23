@@ -1,0 +1,70 @@
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  background: var(--menubar-bg);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  z-index: 9999;
+  font-size: 13px;
+  font-weight: 500;
+  user-select: none;
+  font-family: var(--font-system);
+}
+
+.menu-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.menu-bar-logo {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 15px;
+  padding: 0 10px 0 4px;
+}
+
+.menu-bar-item {
+  color: var(--text-primary);
+  cursor: default;
+  padding: 2px 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.menu-bar-item:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.menu-bar-item.bold {
+  font-weight: 700;
+}
+
+.menu-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.menu-bar-right-icon {
+  padding: 2px 6px;
+  border-radius: 4px;
+  cursor: default;
+  font-size: 14px;
+}
+
+.menu-bar-right-icon:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
