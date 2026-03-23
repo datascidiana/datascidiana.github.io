@@ -4,7 +4,6 @@ import react from '@astrojs/react';
 
 export default defineConfig({
   site: 'https://datascidiana.github.io',
-  base: '/website',
   integrations: [react()],
   output: 'static',
 });
