@@ -18,17 +18,18 @@ const commands: Record<string, string> = {
   clear      – Clear terminal`,
 
   about: `
-  Diana Morales — AI Scientist
+  Diana Morales — AI Scientist · Chicago, IL
   ════════════════════════════════════════════
-  AI Scientist building agentic AI systems,
-  fine-tuning LLMs, and delivering machine
-  learning solutions that drive real business
-  impact.
-
-  From reducing claims processing from days
-  to minutes, to architecting autonomous AI
-  agents — I turn cutting-edge research into
-  production systems.`,
+  AI Scientist specializing in agentic AI
+  systems, large language models, and
+  production machine learning. I lead
+  cross-functional AI initiatives from
+  discovery through prototype to adoption —
+  building systems like autonomous AI agents
+  with LangGraph, fine-tuning LLMs for
+  specialized domains, and architecting
+  knowledge graph platforms that power
+  enterprise AI workflows.`,
 
   experience: `
   💼 Work Experience
