@@ -73,7 +73,7 @@ export default function TrashWindow() {
       </div>
 
       <div style={{ marginTop: 16, display: 'flex', flexDirection: 'column', gap: 1 }}>
-        {discardedModels.map((model, i) => (
+        {[...discardedModels].reverse().map((model, i) => (
           <div
             key={model.name}
             style={{
