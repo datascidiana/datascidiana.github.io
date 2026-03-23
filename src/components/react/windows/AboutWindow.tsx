@@ -86,7 +86,7 @@ export default function AboutWindow() {
             {
               role: 'Independent Research & Development',
               company: '',
-              period: 'Aug 2025 – Present',
+              period: '',
               bullets: [
                 'Architected an autonomous AI penetration testing agent using LangGraph with human-in-the-loop approval gates, MITRE ATT\u0026CK mapping, and crash-safe state persistence',
                 'Trained and deployed custom fine-tuned LLMs using QLoRA on NVIDIA DGX Spark via vLLM for cybersecurity applications',
