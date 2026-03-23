@@ -57,13 +57,12 @@ const commands: Record<string, string> = {
   skills: `
   🛠  Technical Skills
   ════════════════════════════════════════════
-  Core       │ Agentic AI, LLMs, Machine Learning
-  Frameworks │ LangGraph, vLLM, QLoRA, PyTorch
-  Techniques │ RAG, Prompt Engineering, NLP, OCR
-  Platforms  │ GCP/VertexAI, Neo4j, NVIDIA DGX
   Languages  │ Python, SQL
-  Data       │ Unsupervised Learning, Clustering
-  Other      │ Data Storytelling, Knowledge Graphs`,
+  ML / AI    │ Machine Learning, NLP, Unsupervised Learning
+  LLMs       │ Fine-tuning (QLoRA), vLLM, Prompt Engineering
+  Agentic AI │ LangGraph, RAG Pipelines, Knowledge Graphs
+  Platforms  │ GCP / VertexAI, Neo4j
+  Other      │ OCR, Data Storytelling`,
 
   projects: `
   📁 Featured Projects
