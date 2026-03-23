@@ -35,11 +35,11 @@ const commands: Record<string, string> = {
   💼 Work Experience
   ════════════════════════════════════════════
 
-  Independent R&D          Aug 2025 – Present
+  Independent R&D
   ──────────────────────────────────────────
   • Autonomous AI pentest agent (LangGraph)
   • Fine-tuned LLMs for cybersecurity (QLoRA)
-  • Knowledge graph platform (Neo4j, 7+ sources)
+  • Knowledge graph platform (Neo4j, multimodal)
 
   Innovation AI Scientist, Wex  Jun 2024 – Present
   ──────────────────────────────────────────
@@ -50,7 +50,7 @@ const commands: Record<string, string> = {
 
   Data Scientist, Accenture     Apr 2022 – Jun 2024
   ──────────────────────────────────────────
-  • Multilingual NLP segmentation (95% accuracy)
+  • Audience segmentation (95% accuracy)
   • Fine-tuned LLM for sentiment analysis
   • GCP/VertexAI, Looker dashboards`,
 
