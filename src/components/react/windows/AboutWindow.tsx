@@ -191,7 +191,7 @@ export default function AboutWindow() {
             'Python',
             'GCP / VertexAI',
             'Neo4j',
-            'NVIDIA DGX / vLLM',
+            'vLLM',
             'Data Storytelling',
             'Unsupervised Learning',
             'OCR',
