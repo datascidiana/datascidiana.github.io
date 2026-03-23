@@ -244,6 +244,31 @@ export default function AboutWindow() {
           <span style={{ color: 'var(--text-secondary)' }}> · Illinois Institute of Technology · Chicago, IL · GPA 4.0/4.0</span>
         </div>
       </div>
+
+      <div style={{ marginTop: 24, borderTop: '0.5px solid var(--border-light)', paddingTop: 20 }}>
+        <a
+          href="/resume.pdf"
+          download="Diana_Morales_Resume.pdf"
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 8,
+            padding: '10px 20px',
+            background: 'var(--accent-blue)',
+            color: 'white',
+            borderRadius: 8,
+            textDecoration: 'none',
+            fontSize: 13,
+            fontWeight: 600,
+            fontFamily: 'var(--font-system)',
+            transition: 'opacity 0.15s',
+          }}
+          onMouseEnter={(e) => { e.currentTarget.style.opacity = '0.85'; }}
+          onMouseLeave={(e) => { e.currentTarget.style.opacity = '1'; }}
+        >
+          ↓ Download Resume
+        </a>
+      </div>
     </div>
   );
 }
