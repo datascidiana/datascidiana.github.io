@@ -11,31 +11,31 @@ const books: Book[] = [
   {
     title: 'AI Engineering',
     author: 'Chip Huyen',
-    cover: '/website/photos/book-ai-engineering.jpg',
+    cover: '/photos/book-ai-engineering.jpg',
     color: '#2a6496',
   },
   {
     title: "LLM Engineer's Handbook",
     author: 'Paul Iusztin & Maxime Labonne',
-    cover: '/website/photos/book-llm-handbook.jpg',
+    cover: '/photos/book-llm-handbook.jpg',
     color: '#6b3a8a',
   },
   {
     title: 'Empire of AI',
     author: 'Karen Hao',
-    cover: '/website/photos/book-empire-of-ai.jpg',
+    cover: '/photos/book-empire-of-ai.jpg',
     color: '#8c3a3a',
   },
   {
     title: 'The Hundred-Page Language Models Book',
     author: 'Andriy Burkov',
-    cover: '/website/photos/book-hundred-page-lm.jpg',
+    cover: '/photos/book-hundred-page-lm.jpg',
     color: '#3a3a3a',
   },
   {
     title: 'Steal Like an Artist',
     author: 'Austin Kleon',
-    cover: '/website/photos/book-steal-like-artist.jpg',
+    cover: '/photos/book-steal-like-artist.jpg',
     color: '#1a1a1a',
   },
 ];
