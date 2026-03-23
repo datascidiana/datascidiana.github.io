@@ -243,7 +243,7 @@ export default function AboutWindow() {
         </div>
       </div>
 
-      <div style={{ marginTop: 24, borderTop: '0.5px solid var(--border-light)', paddingTop: 20 }}>
+      <div style={{ marginTop: 24, borderTop: '0.5px solid var(--border-light)', paddingTop: 20, textAlign: 'center' }}>
         <a
           href="/resume.pdf"
           download="Diana_Morales_Resume.pdf"
