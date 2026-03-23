@@ -180,23 +180,23 @@ export default function AboutWindow() {
         </h3>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
           {[
-            'Agentic AI',
-            'LLMs',
-            'Machine Learning',
-            'NLP',
-            'RAG Pipelines',
-            'LangGraph',
-            'Fine-tuning (QLoRA)',
-            'Prompt Engineering',
             'Python',
-            'GCP / VertexAI',
-            'Neo4j',
-            'vLLM',
-            'Data Storytelling',
-            'Unsupervised Learning',
-            'OCR',
-            'Knowledge Graphs',
             'SQL',
+            'Machine Learning',
+            'Unsupervised Learning',
+            'NLP',
+            'LLMs',
+            'Fine-tuning (QLoRA)',
+            'vLLM',
+            'Agentic AI',
+            'LangGraph',
+            'RAG Pipelines',
+            'Prompt Engineering',
+            'Knowledge Graphs',
+            'Neo4j',
+            'GCP / VertexAI',
+            'OCR',
+            'Data Storytelling',
           ].map((skill) => (
             <span
               key={skill}
