@@ -10,7 +10,7 @@ export const desktopIcons: DesktopIconData[] = [
   {
     id: 'about',
     label: 'About Me',
-    icon: '👤',
+    icon: '👩‍💻',
     position: { top: '20px', left: '40px' },
     dockOrder: 1,
   },
