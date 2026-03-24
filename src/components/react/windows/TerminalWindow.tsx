@@ -221,11 +221,12 @@ export default function TerminalWindow() {
               outline: 'none',
               color: '#f0f0f0',
               fontFamily: 'var(--font-mono)',
-              fontSize: 13,
+              fontSize: 16,
               caretColor: '#f0f0f0',
             }}
             autoFocus
             spellCheck={false}
+            onFocus={() => setTimeout(() => bottomRef.current?.scrollIntoView({ behavior: 'smooth' }), 300)}
           />
         </div>
         <div ref={bottomRef} />
