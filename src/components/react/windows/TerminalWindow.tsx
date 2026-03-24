@@ -177,8 +177,10 @@ export default function TerminalWindow() {
 
   return (
     <div
+      className="terminal-container"
       style={{
-        height: '100%',
+        flex: 1,
+        minHeight: 0,
         display: 'flex',
         flexDirection: 'column',
         background: '#1e1e1e',
@@ -190,7 +192,7 @@ export default function TerminalWindow() {
       }}
       onClick={() => inputRef.current?.focus()}
     >
-      <div style={{ flex: 1, overflow: 'auto' }}>
+      <div style={{ flex: 1, minHeight: 0, overflow: 'auto', WebkitOverflowScrolling: 'touch' } as React.CSSProperties}>
         {history.map((line, i) => (
           <div
             key={i}

@@ -59,6 +59,7 @@ export default function BookshelfWindow() {
           boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
         }}
       >
+        <div style={{ minWidth: 'fit-content' }}>
         {/* Back wall */}
         <div
           style={{
@@ -169,6 +170,7 @@ export default function BookshelfWindow() {
             boxShadow: '0 4px 12px rgba(0,0,0,0.25)',
           }}
         />
+        </div>
       </div>
 
       {/* Hovered book details */}
