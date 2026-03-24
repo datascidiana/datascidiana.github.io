@@ -50,14 +50,17 @@ export default function StickyNote() {
           ×
         </button>
         <div style={{ marginBottom: 6, fontWeight: 700, fontSize: 14 }}>
-          Welcome! 👋
+          Hi, I'm Diana 👋
         </div>
         <div>
+          AI Scientist & ML Engineer
+          <br />
+          based in Chicago, IL.
+          <br />
+          <br />
           Double-click the icons or
           <br />
-          use the dock to explore.
-          <br />
-          Have fun!
+          use the dock to explore!
         </div>
       </div>
     </Rnd>

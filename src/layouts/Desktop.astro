@@ -25,6 +25,10 @@ import Dock from '../components/astro/Dock.astro';
       <div class="cloud-layer cloud-layer-2"></div>
       <div class="cloud-layer cloud-layer-3"></div>
       <div class="cloud-layer cloud-layer-4"></div>
+      <div class="wallpaper-identity">
+        <div class="wallpaper-name">Diana Morales</div>
+        <div class="wallpaper-title">AI Scientist &amp; ML Engineer</div>
+      </div>
     </div>
 
     <!-- Desktop -->
@@ -91,6 +95,50 @@ import Dock from '../components/astro/Dock.astro';
           radial-gradient(ellipse 1200px 400px at 50% 90%, rgba(230,238,245,0.9) 0%, transparent 70%),
           radial-gradient(ellipse 900px 300px at 20% 85%, rgba(235,240,248,0.7) 0%, transparent 65%),
           radial-gradient(ellipse 700px 250px at 80% 88%, rgba(230,236,244,0.6) 0%, transparent 60%);
+      }
+
+      .wallpaper-identity {
+        position: absolute;
+        bottom: 120px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        pointer-events: none;
+        user-select: none;
+      }
+
+      .wallpaper-name {
+        font-family: var(--font-system);
+        font-size: 64px;
+        font-weight: 700;
+        letter-spacing: -1px;
+        color: rgba(30, 60, 100, 0.18);
+        line-height: 1;
+      }
+
+      .wallpaper-title {
+        font-family: var(--font-system);
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: rgba(30, 60, 100, 0.14);
+        margin-top: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .wallpaper-identity {
+          bottom: 100px;
+        }
+        .wallpaper-name {
+          font-size: 36px;
+        }
+        .wallpaper-title {
+          font-size: 12px;
+          letter-spacing: 1.5px;
+        }
       }
 
       .desktop-area {
