@@ -64,6 +64,16 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Mobile responsive overrides */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .about-profile {
+    flex-direction: column !important;
+  }
+}
+
 /* Scrollbar styling — macOS thin style */
 ::-webkit-scrollbar {
   width: 8px;

@@ -50,7 +50,7 @@ export default function ContactWindow() {
         Feel free to reach out through any of these channels
       </p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
+      <div className="contact-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
         {links.map((link) => (
           <a
             key={link.label}

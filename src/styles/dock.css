@@ -103,3 +103,32 @@
 .dock-dot.active {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .dock-wrapper {
+    bottom: 8px;
+    width: calc(100% - 16px);
+    left: 8px;
+    right: 8px;
+    transform: none;
+  }
+  .dock {
+    justify-content: center;
+    gap: 0;
+    padding: 4px 6px;
+    width: 100%;
+  }
+  .dock-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 26px;
+    border-radius: 10px;
+  }
+  .dock-item:hover .dock-icon,
+  .dock-item:has(+ .dock-item:hover) .dock-icon,
+  .dock-item:hover + .dock-item .dock-icon,
+  .dock-item:has(+ .dock-item + .dock-item:hover) .dock-icon,
+  .dock-item:hover + .dock-item + .dock-item .dock-icon {
+    transform: none;
+  }
+}

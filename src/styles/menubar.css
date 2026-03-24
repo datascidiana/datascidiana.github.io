@@ -68,3 +68,12 @@
 .menu-bar-right-icon:hover {
   background: rgba(0, 0, 0, 0.08);
 }
+
+@media (max-width: 768px) {
+  .menu-bar-item {
+    display: none;
+  }
+  .menu-bar-logo {
+    padding: 0 6px 0 2px;
+  }
+}
