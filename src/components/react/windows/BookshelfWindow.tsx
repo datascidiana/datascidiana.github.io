@@ -52,10 +52,10 @@ export default function BookshelfWindow() {
 
       {/* Bookshelf */}
       <div
+        className="bookshelf-outer"
         style={{
           background: 'linear-gradient(180deg, #5c3d1e 0%, #4a3218 100%)',
           borderRadius: 8,
-          overflow: 'hidden',
           boxShadow: '0 4px 20px rgba(0,0,0,0.15)',
         }}
       >
@@ -70,6 +70,7 @@ export default function BookshelfWindow() {
         >
           {/* Books row */}
           <div
+            className="bookshelf-row"
             style={{
               display: 'flex',
               alignItems: 'flex-end',

@@ -64,6 +64,11 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Bookshelf */
+.bookshelf-outer {
+  overflow: hidden;
+}
+
 /* Mobile responsive overrides */
 @media (max-width: 768px) {
   .contact-grid {
@@ -71,6 +76,15 @@ a:hover {
   }
   .about-profile {
     flex-direction: column !important;
+  }
+  .bookshelf-outer {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  .bookshelf-row {
+    justify-content: flex-start !important;
+    padding-bottom: 4px;
   }
 }
 
