@@ -99,7 +99,7 @@ export default function AboutWindow() {
               period: 'Jun 2024 – Present',
               bullets: [
                 'Led cross-functional AI initiatives from discovery to prototype to adoption, de-risking investments in emerging opportunities',
-                'Achieved 97% precision in reimbursement predictions, reducing FSA claims processing from days to minutes using agentic AI with RAG, prompt engineering, and OCR — contributing to a $786M increase in market cap',
+                'Achieved 97% precision in reimbursement predictions, reducing FSA claims processing from days to minutes using agentic AI with RAG, prompt engineering, and OCR — contributing to a significant increase in market cap',
                 'Built 3 high-impact agentic AI agents used by the CEO and Investor Relations team for earnings calls; received WEX Digital Dynamo Award',
                 'Delivered a fully automated transaction data cleansing pipeline using unsupervised clustering models (98%+ accuracy)',
                 'Championed company-wide AI enablement through articles, training, and demos viewed by the Board of Directors',
